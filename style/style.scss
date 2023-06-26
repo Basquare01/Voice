@@ -1,0 +1,114 @@
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(89, 54, 243), 
+    rgb(236, 62, 62));
+}
+
+.Container{
+    background: #000;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 400px;
+}
+
+.Title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    span{
+        color: rgb(236, 62, 62);
+        font-weight: 600;
+        font-size: 40px;
+        text-decoration: underline;
+    }
+}
+
+textarea{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #7571cc;
+    height: 250px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 20px;
+    resize: none;
+    color: white;
+    &::placeholder{
+        color: #eee;
+    }
+}
+
+.Function{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+select{
+    flex: 1;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    // appearance: none;
+    height: 30px;
+    background-color: #7571cc;
+    padding: 0 12px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    background: rgb(236, 62, 62);
+    .fa-play{
+        padding-right: 5px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    body{
+        margin-top: -120px;
+    }
+    
+    .Container{
+        padding: 10px;
+        width: 300px;
+    }
+
+    button{
+        font-size: 10px;
+        width: 100px;
+    }
+    
+    .Function{
+        display: flex;
+        flex-direction: column;
+    }
+
+    select{
+        height: 30px;
+    }
+}
